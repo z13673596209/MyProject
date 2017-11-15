@@ -1,5 +1,7 @@
 package sort;
 
+import algorithm_analysis.StopWatch;
+
 public class SelectSorter implements EasySorter {
 
     public static void sort(Comparable[] a) {
@@ -15,10 +17,12 @@ public class SelectSorter implements EasySorter {
     }
 
     public static void main(String[] args) {
-        Integer[] a = new Integer[]{3,1,8,10,6};
+        StopWatch stopWatch = new StopWatch();
+        Integer[] a = new Integer[]{5,9,2,1,6,3,5,6,13,55,8};
         sort(a);
         System.out.println("选择排序：");
         EasySorter.show(a);
+        System.out.println("时间："+stopWatch.elapsedTime());
 
     }
 }
